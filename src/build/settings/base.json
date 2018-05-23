@@ -1,0 +1,5 @@
+{
+    "app_name": "Desklutter",
+    "main_module": "src/main/python/desklutter/main.py",
+    "author": "ivaylo_sakelariev"
+}
