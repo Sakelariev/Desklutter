@@ -2,7 +2,7 @@
 
 While I'm working during the day I frequently use my Desktop for saving all sorts of files or systematizing my current work. As a result at the end of the day I end up with a Desktop that is fully cluttered with files and folders. So I decided to built a small Desktop app to move all those into a folder for me at a scheduled time.
 
-### [Download (Mac OS)](https://github.com/Sakelariev/Desklutter/raw/master/target/Desklutter.dmg)
+### [Download installer (Mac OS)](https://github.com/Sakelariev/Desklutter/raw/master/target/Desklutter.dmg)
 
 
 ### Technology
