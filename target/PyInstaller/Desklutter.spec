@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['../../src/main/python/desklutter/main.py'],
-             pathex=['/Users/user/Dropbox/Python/Desklutter/Official/target/PyInstaller'],
+             pathex=['/Users/imac/Dropbox/Python/Desklutter/Desklutter/target/PyInstaller'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           debug=False,
           strip=False,
           upx=False,
-          console=False , icon='/Users/user/Dropbox/Python/Desklutter/Official/target/Icon.icns')
+          console=False , icon='/Users/imac/Dropbox/Python/Desklutter/Desklutter/target/Icon.icns')
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
@@ -33,5 +33,5 @@ coll = COLLECT(exe,
                name='Desklutter')
 app = BUNDLE(coll,
              name='Desklutter.app',
-             icon='/Users/user/Dropbox/Python/Desklutter/Official/target/Icon.icns',
+             icon='/Users/imac/Dropbox/Python/Desklutter/Desklutter/target/Icon.icns',
              bundle_identifier='com.example.tutorial')

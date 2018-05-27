@@ -12,6 +12,8 @@ import os
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import (QWidget, QSlider, QLabel, QGridLayout, QVBoxLayout, QHBoxLayout, QApplication, QInputDialog, QLineEdit, QSystemTrayIcon, QMenu, QAction)
+# import logging
+# logging.basicConfig(filename='desklutter.log',level=logging.DEBUG)
 
 
 
@@ -39,7 +41,7 @@ class AppContext(ApplicationContext):
         return sys.exit()
 
 
-    @cached_property
+#Don't cache this please
     def showWindow(self):
         return self.window.show()
 
@@ -60,7 +62,7 @@ class AppContext(ApplicationContext):
     @cached_property
     def action(self):
         turn_on = QAction("Open Desklutter")
-        turn_on.triggered.connect(lambda:self.showWindow)
+        turn_on.triggered.connect(self.showWindow)
         return turn_on
     @cached_property
     def action2(self):
@@ -93,6 +95,7 @@ class MyApp(QtWidgets.QMainWindow):
         self.startButton.clicked.connect(self.disablePicker)
         self.startButton.clicked.connect(self.disableButton)
         self.startButton.clicked.connect(self.enableCheckbox)
+        self.checkBox.clicked.connect(self.resetSchedule)
 
     def enableCheckbox(self):
         return self.checkBox.setEnabled(True)
@@ -105,6 +108,12 @@ class MyApp(QtWidgets.QMainWindow):
 
     def hideWindow(self):
         return self.close()
+
+    def resetSchedule(self):
+        schedule.clear()
+        self.startButton.setEnabled(True)
+        self.timeBegin.setEnabled(True)
+
 
     #Create a folder if it doesn't exist already
     def createFolder(directory):
