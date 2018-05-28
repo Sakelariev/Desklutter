@@ -15,7 +15,7 @@ Desklutter was built using the following technologies :
 
 ### OS
 
-Mac OSX High Sierra 10.13 or above 
+Mac OSX Sierra 10.12 or above 
 Windows (Coming Soon!)
 
 ### License
